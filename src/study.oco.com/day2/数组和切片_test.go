@@ -249,3 +249,18 @@ func countries() []string {
 	copy(copyCountries, needCountries)
 	return copyCountries
 }
+
+func Test_Array_F(log *testing.T) {
+	source := []string{"Apple", "Orange", "Plum", "Banana", "Grape"}
+	log.Log(source)
+	silce := source[2:3:3]
+	log.Log(silce)
+
+	source[2] = "订单"
+	log.Log(silce)
+
+	silce = append(silce, "啤酒")
+	log.Log(silce)
+
+	log.Log(source)
+}
